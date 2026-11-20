@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyTicket</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>TICKET BOOKING</h1>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#submit">Submit Ticket</a>
+    <a href="#records">Records</a>
+</nav>
+
+<main>
+    <section id="home">
+        <h2>TICKET QUEUES</h2>
+        <div class="cards">
+            <div class="card">
+                <h3 id="total">0</h3>
+                <p>Total Tickets</p>
+            </div>
+            <div class="card">
+                <h3 id="pending">0</h3>
+                <p>Pending</p>
+            </div>
+            <div class="card">
+                <h3 id="resolved">0</h3>
+                <p>Resolved</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="submit">
+        <h2>Submit a Ticket</h2>
+
+        <form id="ticketForm">
+            <label>Name</label>
+            <input type="text" id="name" required>
+
+            <label>Email</label>
+            <input type="email" id="email" required>
+
+            <label>Category</label>
+            <select id="category" required>
+                <option value="">Choose Category</option>
+                <option>Technical Support</option>
+                <option>General Inquiry</option>
+                <option>Account Assistance</option>
+            </select>
+
+            <label>Subject</label>
+            <input type="text" id="subject" required>
+
+            <label>Description</label>
+            <textarea id="description" required></textarea>
+
+            <button type="submit">Submit Ticket</button>
+        </form>
+
+        <div id="message"></div>
+    </section>
+
+    <section id="records">
+        <h2>Ticket Records</h2>
+
+        <input type="search" id="search" placeholder="Search ticket...">
+
+        <div class="table-box">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ticket No.</th>
+                        <th>Name</th>
+                        <th>Category</th>
+                        <th>Subject</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="ticketList"></tbody>
+            </table>
+        </div>
+    </section>
+<script src="script.js"></script>
+</body>
+</html>
